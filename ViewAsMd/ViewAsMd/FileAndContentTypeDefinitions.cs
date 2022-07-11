@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.Utilities;
 
 namespace ViewAsMd
 {
-    internal class FileAndContentTypeDefinitions
+    internal sealed class FileAndContentTypeDefinitions
     {
         [Export]
         [Name("markdown")]
