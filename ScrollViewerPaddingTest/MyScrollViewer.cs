@@ -10,8 +10,6 @@ namespace ScrollViewerPaddingTest
 {
     public class MyScrollViewer : ScrollViewer
     {
-        public MyScrollViewer() : base() { }
-
         protected override Size MeasureOverride(Size availableSize)
         {
             var scale = LayoutHelper.GetLayoutScale(this);

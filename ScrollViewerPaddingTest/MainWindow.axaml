@@ -17,15 +17,14 @@
 
         <local:MyScrollViewer
                 Grid.Row="0" Grid.Column="0"
-                Padding="5">
+                Padding="20">
             <TextBlock TextWrapping="Wrap" Text="ScrollViewer with customized MeasureOverride&#x0A;The World Wide Web (WWW), commonly known as the Web, is an information system enabling documents and other web resources to be accessed over the Internet."/>
         </local:MyScrollViewer>
 
         <ScrollViewer
                 Grid.Row="1" Grid.Column="0"
-                Padding="5">
+                Padding="20">
             <TextBlock TextWrapping="Wrap" Text="Original ScrollViewer&#x0A;The World Wide Web (WWW), commonly known as the Web, is an information system enabling documents and other web resources to be accessed over the Internet."/>
         </ScrollViewer>
     </Grid>
-        
 </Window>
