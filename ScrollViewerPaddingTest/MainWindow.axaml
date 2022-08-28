@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScrollViewerPaddingTest"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ScrollViewerPaddingTest.MainWindow"
+        Title="ScrollViewerPaddingTest">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <local:MyScrollViewer
+                Grid.Row="0" Grid.Column="0"
+                Padding="5">
+            <TextBlock TextWrapping="Wrap" Text="ScrollViewer with customized MeasureOverride&#x0A;The World Wide Web (WWW), commonly known as the Web, is an information system enabling documents and other web resources to be accessed over the Internet."/>
+        </local:MyScrollViewer>
+
+        <ScrollViewer
+                Grid.Row="1" Grid.Column="0"
+                Padding="5">
+            <TextBlock TextWrapping="Wrap" Text="Original ScrollViewer&#x0A;The World Wide Web (WWW), commonly known as the Web, is an information system enabling documents and other web resources to be accessed over the Internet."/>
+        </ScrollViewer>
+    </Grid>
+        
+</Window>
