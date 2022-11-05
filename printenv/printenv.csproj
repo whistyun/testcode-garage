@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,11 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <TstVarVal>$([System.Environment]::GetEnvironmentVariable("TST_VAR"))</TstVarVal>
+  </PropertyGroup>
+
   <PropertyGroup Condition=" '$(TST_VAR)' != '' ">
     <DefineConstants>TstVar</DefineConstants>
   </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(PATH)' != '' ">
-    <DefineConstants>PathVar</DefineConstants>
-  </PropertyGroup>
 </Project>
+
+
+
