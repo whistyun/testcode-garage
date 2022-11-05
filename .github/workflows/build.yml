@@ -1,0 +1,16 @@
+name: .NET
+
+on:
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: TestRun
+      run: python printenv.py
+      env:
+        TST_VAR: y
