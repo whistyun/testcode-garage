@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>netcoreapp3.0;net45;net5.0-windows</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <Configurations>Debug;Release</Configurations>
+    <IsPackable>False</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Asset\ResourceImage.png" />
+    <None Remove="MainWindow.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MainWindow.md">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MdXaml" Version="1.16.2" />
+    <PackageReference Include="MdXaml.Html" Version="1.16.2" />
+    <PackageReference Include="MdXaml.Plugins" Version="1.16.2" />
+    <PackageReference Include="MdXaml.Svg" Version="1.16.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Asset\ResourceImage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LocalPath.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

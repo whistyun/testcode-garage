@@ -1,0 +1,16 @@
+<Application x:Class="MdXaml.ScrollDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MdXaml.ScrollDemo"
+             xmlns:mdplugins="clr-namespace:MdXaml.Plugins;assembly=MdXaml.Plugins"
+             xmlns:mdhtml="clr-namespace:MdXaml.Html;assembly=MdXaml.Html"
+             xmlns:mdsvg="clr-namespace:MdXaml.Svg;assembly=MdXaml.Svg"
+             StartupUri="MainWindow.xaml">
+
+    <Application.Resources>
+        <mdplugins:MdXamlPlugins x:Key="MdXamlPlugins">
+            <mdhtml:HtmlPluginSetup/>
+            <mdsvg:SvgPluginSetup/>
+        </mdplugins:MdXamlPlugins>
+    </Application.Resources>
+</Application>
