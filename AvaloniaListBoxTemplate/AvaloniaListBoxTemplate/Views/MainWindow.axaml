@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaListBoxTemplate.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="clr-namespace:Markdown.Avalonia;assembly=Markdown.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaListBoxTemplate.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaListBoxTemplate">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+
+  <StackPanel Orientation="Vertical">
+
+    <Label>List1</Label>
+    <ListBox Items="{Binding SimpleTexts}">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <md:MarkdownScrollViewer Markdown="{Binding}"/>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+
+    <Label>List2</Label>
+    <ListBox Items="{Binding Items}">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <md:MarkdownScrollViewer Markdown="{Binding Text}"/>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+
+  </StackPanel>
+</Window>
